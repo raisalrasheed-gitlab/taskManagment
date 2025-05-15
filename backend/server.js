@@ -8,10 +8,13 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/taskmanager', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    'mongodb+srv://raisalrasheed545:sRDAcJ4B4CUk2O7p@taskmanagement.z4vvymx.mongodb.net/?retryWrites=true&w=majority&appName=taskManagement',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log('MongoDB Connected'));
 
 app.use('/api/tasks', require('./routes/tasks'));
