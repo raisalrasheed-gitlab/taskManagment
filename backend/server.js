@@ -10,10 +10,7 @@ app.use(express.json());
 mongoose
   .connect(
     'mongodb+srv://raisalrasheed545:sRDAcJ4B4CUk2O7p@taskmanagement.z4vvymx.mongodb.net/?retryWrites=true&w=majority&appName=taskManagement',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
+    {}
   )
   .then(() => console.log('MongoDB Connected'));
 
