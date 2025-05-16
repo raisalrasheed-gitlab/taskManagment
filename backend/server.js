@@ -6,7 +6,9 @@ require('dotenv').config();
 const app = express();
 app.use(
   cors({
-    origin: '',
+    origin: 'https://task-managment-sand.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
   })
 );
 app.use(express.json());
