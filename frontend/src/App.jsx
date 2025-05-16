@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getTasks, createTask, updateTask, deleteTask } from './api';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
-
+import FrontHandIcon from '@mui/icons-material/FrontHand';
 function App() {
   const [tasks, setTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
@@ -37,7 +37,10 @@ function App() {
 
   return (
     <div className="container mx-auto p-4 ">
-      <h1 className="text-2xl font-bold mb-4 mx-auto">Task Manager</h1>
+      <h1 className="text-2xl font-bold mb-4 mx-auto">
+        Task Manager
+        <FrontHandIcon />
+      </h1>
 
       <TaskForm
         onAdd={handleAdd}
